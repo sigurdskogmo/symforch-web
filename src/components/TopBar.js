@@ -108,9 +108,9 @@ const TopBar = () => {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <MenuItem onClick={handleClose}><HomeIcon className={classes.menuIcons}/> Forsiden</MenuItem>
-                                    <MenuItem onClick={handleClose}><EventIcon className={classes.menuIcons}/> Konserter</MenuItem>
-                                    <MenuItem onClick={handleClose}><InfoIcon className={classes.menuIcons}/> Om orkesteret</MenuItem>
+                                    <MenuItem onClick={handleClose}><HomeIcon className={classes.menuIcons} color={'primary'}/> Forsiden</MenuItem>
+                                    <MenuItem onClick={handleClose}><EventIcon className={classes.menuIcons} color={'primary'}/> Konserter</MenuItem>
+                                    <MenuItem onClick={handleClose}><InfoIcon className={classes.menuIcons} color={'primary'}/> Om orkesteret</MenuItem>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>

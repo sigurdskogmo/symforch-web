@@ -1,9 +1,10 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
 
 const theme = createMuiTheme({
     palette: {
-        primary: red,
+        primary: {
+            main: '#ee1d23', // The same color that the logo has
+        },
         secondary: {
             main: '#ffffff',
             contrastText: 'red'

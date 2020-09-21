@@ -91,16 +91,16 @@ const TopBar = () => {
                     <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                     {({ TransitionProps, placement }) => (
                         <Grow
-                        {...TransitionProps}
-                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                            {...TransitionProps}
+                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                         >
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
-                            <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                                <MenuItem onClick={handleClose}>My account</MenuItem>
-                                <MenuItem onClick={handleClose}>Logout</MenuItem>
-                            </MenuList>
+                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                    <MenuItem onClick={handleClose}>Forsiden</MenuItem>
+                                    <MenuItem onClick={handleClose}>Konserter</MenuItem>
+                                    <MenuItem onClick={handleClose}>Om orkesteret</MenuItem>
+                                </MenuList>
                             </ClickAwayListener>
                         </Paper>
                         </Grow>

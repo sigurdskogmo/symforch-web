@@ -1,10 +1,22 @@
+// React
 import React from 'react';
+import { useState, useRef, useEffect } from 'react';
+
+// Assets
+import Logo from '../assets/Logo';
+
+// MaterialUI
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Logo from '../assets/Logo';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Grow from '@material-ui/core/Grow';
+import Paper from '@material-ui/core/Paper';
+import Popper from '@material-ui/core/Popper';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,6 +34,42 @@ const useStyles = makeStyles((theme) => ({
  
 const TopBar = () => {
     const classes = useStyles();
+    
+    /** 
+     * This part until the return could and probably should
+     * be put into a separate component that handles the menu
+     * */ 
+
+    const [open, setOpen] = useState(false);
+    const anchorRef = useRef(null);
+
+    const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+    };
+
+    const handleClose = (event) => {
+        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+            return;
+        }
+
+        setOpen(false);
+    }
+
+    const handleListKeyDown = (event) => {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+            setOpen(false);
+        }
+    }
+
+    const prevOpen = useRef(open);
+    useEffect(() => {
+        if (prevOpen.current === true && open === false) {
+            anchorRef.current.focus();
+        }
+
+        prevOpen.current = open;
+    }, [open]);
 
     return (
         <div>
@@ -33,10 +81,31 @@ const TopBar = () => {
                         className={classes.menuButton} 
                         color="inherit" 
                         aria-label="menu"
-                        onClick={() => alert('This page is still in development')}
+                        ref={anchorRef}
+                        aria-controls={open ? 'menu-list-grow' : undefined}
+                        aria-haspopup="true"
+                        onClick={handleToggle}
                     >
                         <MenuIcon />
                     </IconButton>
+                    <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                        {...TransitionProps}
+                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                        >
+                        <Paper>
+                            <ClickAwayListener onClickAway={handleClose}>
+                            <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                                <MenuItem onClick={handleClose}>My account</MenuItem>
+                                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                            </MenuList>
+                            </ClickAwayListener>
+                        </Paper>
+                        </Grow>
+                    )}
+                    </Popper>
                 </Toolbar>
             </AppBar>
         </div>

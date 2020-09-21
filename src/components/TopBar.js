@@ -10,13 +10,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+
+// Material icons
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import HomeIcon from '@material-ui/icons/Home';
+import EventIcon from '@material-ui/icons/Event';
+import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,7 +35,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         height: 48,
         maxHeight: 64,
-    } 
+    } ,
+    menuIcons: {
+        marginRight: theme.spacing(1),
+    }
   }));
  
 const TopBar = () => {
@@ -86,7 +95,9 @@ const TopBar = () => {
                         aria-haspopup="true"
                         onClick={handleToggle}
                     >
-                        <MenuIcon />
+                        {
+                            open ? <MenuOpenIcon /> : <MenuIcon />
+                        }
                     </IconButton>
                     <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                     {({ TransitionProps, placement }) => (
@@ -97,9 +108,9 @@ const TopBar = () => {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <MenuItem onClick={handleClose}>Forsiden</MenuItem>
-                                    <MenuItem onClick={handleClose}>Konserter</MenuItem>
-                                    <MenuItem onClick={handleClose}>Om orkesteret</MenuItem>
+                                    <MenuItem onClick={handleClose}><HomeIcon className={classes.menuIcons}/> Forsiden</MenuItem>
+                                    <MenuItem onClick={handleClose}><EventIcon className={classes.menuIcons}/> Konserter</MenuItem>
+                                    <MenuItem onClick={handleClose}><InfoIcon className={classes.menuIcons}/> Om orkesteret</MenuItem>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>

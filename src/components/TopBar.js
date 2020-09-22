@@ -25,7 +25,7 @@ import EventIcon from '@material-ui/icons/Event';
 import InfoIcon from '@material-ui/icons/Info';
 
 // Navigation
-import { NavLink, BrowserRouter as Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ROUTES from '../ROUTES';
 
 const useStyles = makeStyles((theme) => ({
@@ -88,7 +88,9 @@ const TopBar = () => {
         <div>
             <AppBar position="static" color='secondary'>
                 <Toolbar className={classes.toolbar}>
-                    <Logo className={classes.logo}/>
+                    <NavLink to={ROUTES.HOME} className={classes.logo}>
+                        <Logo className={classes.logo}/>
+                    </NavLink>
                     <IconButton 
                         edge="end" 
                         className={classes.menuButton} 
@@ -112,26 +114,24 @@ const TopBar = () => {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <Router>
-                                        <NavLink to={ROUTES.HOME}>
-                                            <MenuItem onClick={handleClose}>
-                                                <HomeIcon className={classes.menuIcons} color={'primary'}/>
-                                                Forsiden
-                                            </MenuItem>
-                                        </NavLink>
-                                        <NavLink to={ROUTES.CONCERTS}>
-                                            <MenuItem onClick={handleClose}>
-                                                <EventIcon className={classes.menuIcons} color={'primary'}/>
-                                                Konserter
-                                            </MenuItem>
-                                        </NavLink>
-                                        <NavLink to={ROUTES.ABOUT}>
-                                            <MenuItem onClick={handleClose}>
-                                                <InfoIcon className={classes.menuIcons} color={'primary'}/>
-                                                Om orkesteret
-                                            </MenuItem>
-                                        </NavLink>
-                                    </Router>   
+                                    <NavLink to={ROUTES.HOME}>
+                                        <MenuItem onClick={handleClose}>
+                                            <HomeIcon className={classes.menuIcons} color={'primary'}/>
+                                            Forsiden
+                                        </MenuItem>
+                                    </NavLink>
+                                    <NavLink to={ROUTES.CONCERTS}>
+                                        <MenuItem onClick={handleClose}>
+                                            <EventIcon className={classes.menuIcons} color={'primary'}/>
+                                            Konserter
+                                        </MenuItem>
+                                    </NavLink>
+                                    <NavLink to={ROUTES.ABOUT}>
+                                        <MenuItem onClick={handleClose}>
+                                            <InfoIcon className={classes.menuIcons} color={'primary'}/>
+                                            Om orkesteret
+                                        </MenuItem>
+                                    </NavLink>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>

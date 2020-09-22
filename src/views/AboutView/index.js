@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
       flexGrow: 1,
-      height: '100vh',
+      height: 'auto',
       overflow: 'auto',
     },
     container: {
@@ -77,6 +77,16 @@ const AboutView = () => {
                                 </Typography>
                                 <Typography component="p" variant="body1">
                                     Kontaktinfo
+                                </Typography>               
+                            </Paper>
+                        </Grid>
+                        <Grid item lg={12}>
+                            <Paper className={classes.paper}>
+                                <Typography component="p" variant="h4">
+                                    Mer ting og tang
+                                </Typography>
+                                <Typography component="p" variant="body1">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl magna, cursus sit amet turpis eget, lobortis vestibulum sem. Fusce nec enim efficitur, suscipit erat eget, aliquet magna. Duis euismod sollicitudin congue. In hac habitasse platea dictumst. Aliquam dui eros, tempus ac arcu eget, posuere vehicula elit. Donec interdum enim dignissim urna pellentesque feugiat. Mauris id facilisis tellus. Curabitur lobortis tellus diam, a elementum est lobortis venenatis. Etiam bibendum arcu risus, id feugiat leo commodo non. Vivamus sem velit, molestie sodales nunc maximus, pulvinar ultricies tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam convallis id dolor pretium viverra. Suspendisse vel viverra ligula. Cras vulputate, leo ut viverra eleifend, nisi nulla ultricies magna, in congue nisi orci id elit. Integer vitae eros eu arcu vehicula consectetur nec at ligula. Proin ut neque magna.
                                 </Typography>               
                             </Paper>
                         </Grid>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import TopBar from './components/TopBar';
 import ROUTES from './ROUTES';
+
+// Components
+import TopBar from './components/TopBar';
 
 // Views
 import HomeView from './views/HomeView';

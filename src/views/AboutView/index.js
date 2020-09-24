@@ -76,7 +76,9 @@ const AboutView = () => {
                                     Kontakt
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    Kontaktinfo
+                                    For hendvendelser om oppdrag, forespørsler eller lignende, kontakt oss gjerne på mail eller telefon.<br /><br />
+                                    <b>E-post:</b> <a href='mailto:symforch@samfundet.no'>symforch@samfundet.no</a><br />
+                                    <b>Telefon: </b> 123 45 678
                                 </Typography>               
                             </Paper>
                         </Grid>

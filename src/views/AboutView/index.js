@@ -6,26 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
-
 
 //Data
 import aboutText from '../../data.js';
 
-
-const Copyright = () => {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Your Website
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+// Components
+import Copyright from '../../components/Copyright';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
     },
     fixedHeight: {
-      height: 240,
+      height: 400,
     },
   }));
 
@@ -78,7 +65,9 @@ const AboutView = () => {
                                 <Typography component="p" variant="body1">
                                     For hendvendelser om oppdrag, forespørsler eller lignende, kontakt oss gjerne på mail eller telefon.<br /><br />
                                     <b>E-post:</b> <a href='mailto:symforch@samfundet.no'>symforch@samfundet.no</a><br />
-                                    <b>Telefon: </b> 123 45 678
+                                    <b>Telefon:</b> 123 45 678<br />
+                                    <b>Facebook:</b> <a href='https://www.facebook.com/symforch'>www.facebook.com/symforch</a><br />
+                                    <b>Instagram:</b> <a href='https://www.instagram.com/symforch/'>www.instagram.com/symforch/</a>
                                 </Typography>               
                             </Paper>
                         </Grid>

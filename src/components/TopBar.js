@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
     } ,
     menuIcons: {
         marginRight: theme.spacing(1),
+    },
+    menuLinks: {
+        color: '#000000'
     }
   }));
  
@@ -88,9 +91,10 @@ const TopBar = () => {
         <div>
             <AppBar position="static" color='secondary'>
                 <Toolbar className={classes.toolbar}>
-                    <NavLink to={ROUTES.HOME} className={classes.logo}>
+                    <NavLink to={ROUTES.HOME}>
                         <Logo className={classes.logo}/>
                     </NavLink>
+                    <div className={classes.root}></div>
                     <IconButton 
                         edge="end" 
                         className={classes.menuButton} 
@@ -114,19 +118,19 @@ const TopBar = () => {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <NavLink to={ROUTES.HOME}>
+                                    <NavLink to={ROUTES.HOME} className={classes.menuLinks}>
                                         <MenuItem onClick={handleClose}>
                                             <HomeIcon className={classes.menuIcons} color={'primary'}/>
                                             Forsiden
                                         </MenuItem>
                                     </NavLink>
-                                    <NavLink to={ROUTES.CONCERTS}>
+                                    <NavLink to={ROUTES.CONCERTS} className={classes.menuLinks}>
                                         <MenuItem onClick={handleClose}>
                                             <EventIcon className={classes.menuIcons} color={'primary'}/>
                                             Konserter
                                         </MenuItem>
                                     </NavLink>
-                                    <NavLink to={ROUTES.ABOUT}>
+                                    <NavLink to={ROUTES.ABOUT} className={classes.menuLinks}>
                                         <MenuItem onClick={handleClose}>
                                             <InfoIcon className={classes.menuIcons} color={'primary'}/>
                                             Om orkesteret

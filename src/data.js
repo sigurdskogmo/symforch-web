@@ -1,4 +1,0 @@
-const aboutText = {
-    text: "Studentersamfundets Symfoniorkester, også kalt Symforch, ble stiftet i 1910 og er et av landets største og eldste studentorkestre. Orkesteret er en del av Studentersamfundets Orkester, også kjent som Musikerlåfte'. Hver tirsdag samles de omlag 80 medlemmene til øvelse i Storsalen med Gavin David Lee som dirigent. Symforch har flere opptredener per år, alt fra helaftens konserter til kortere spilleoppdrag. Orkesteret behersker flere stilarter, og tilbyr konserter med allsidig og publikumsvennlig repertoar. Med jevne mellomrom gjennomføres samarbeidskonserter med kor og/eller solister."
-};
-export default aboutText;

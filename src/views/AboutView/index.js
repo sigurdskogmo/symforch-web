@@ -8,9 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-//Data
-import aboutText from '../../data.js';
-
 // Components
 import Copyright from '../../components/Copyright';
 
@@ -53,8 +50,29 @@ const AboutView = () => {
                                     Om orkesteret
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    {aboutText.text}
-                                </Typography>             
+                                Studentersamfundets Symfoniorkester, eller Symforch, er en av de 
+                                kunstneriske gjengene ved Studentersamfundet i Trondhjem. Orkesteret 
+                                består av omlag 80 studenter fra ulike studier, og organisering og drift 
+                                baseres på frivillig arbeid lagt ned av studentene selv. Symforch er et 
+                                av landets største studentorkestre, og har eksistert siden 1910. Dirigent 
+                                for orkesteret er Gavin David Lee som vi har hatt fast siden 1992!<br /><br />
+
+                                Som studentorkester når Symforch ut til et litt annet publikum enn byens 
+                                profesjonelle orkester, og gir studenter så vel som lokalsamfunn et 
+                                utfyllende tilbud innenfor klassisk musikk. <br /><br />
+
+                                For våre medlemmer gir orkesteret mulighet til innsikt i organisering, 
+                                orkester- og frivillighetskultur, gleden av å øve mot felles mål og å 
+                                gjennomføre større prosjekter. Dette er noe som på sikt gagner amatørmiljøet 
+                                både her i byen og ellers i landet. Orkesteret er mangfoldig sammensatt, og 
+                                består av studenter fra ulike studier. Noen studerer musikk, men de fleste 
+                                går alle mulige andre typer studier.<br /><br />
+
+                                Selve driften av orkesteret står et styre på seks medlemmer for, som gjør 
+                                sine plikter på frivillig basis. Å ha et verv av denne typen gir en gyllen 
+                                organisasjonserfaring og er meget lærerikt.<br /><br />
+                                </Typography>
+                                          
                             </Paper>
                         </Grid>
                         <Grid item xs={12} md={4} lg={4}>

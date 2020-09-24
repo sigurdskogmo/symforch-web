@@ -10,6 +10,8 @@ import Container from '@material-ui/core/Container';
 
 // Components
 import Copyright from '../../components/Copyright';
+import Img from '../../components/Img';
+import festkonsert_banner from '../../assets/festkonsert_banner.jpg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     fixedHeight: {
       height: 240,
     },
+    img: {
+        maxWidth: '100%'
+    }
   }));
 
 const ConcertView = () => {
@@ -48,8 +53,23 @@ const ConcertView = () => {
                                 <Typography component="p" variant="h4">
                                     Kommende konserter
                                 </Typography>
-                                <Typography component="p" variant="body1">
+                                <Typography component="p" variant="h5">
                                     Festkonsert
+                                </Typography>
+                                <Img source={festkonsert_banner} className={classes.img}/>
+                                <Typography component="p" variant="body1">
+                                    <b>Når: </b>6. oktober kl. 20:00<br />
+                                    <b>Hvor: </b>Storsalen, Studentersamfundet<br />
+                                    <b>Hva: </b>
+                                    1910 startet en gruppe studenter og musikere i Trondheim sitt eget musikalorkester. 
+                                    I løpet av tiden vokste vi, og ble fort et fullt symfoniorkester som har funnet 
+                                    sitt hjem i Storsalen. I år blir vi hele 110år! 
+                                    Dette må selvfølgelig feires slik vi liker best: med en staselig festkonsert.<br /><br />
+                                    
+                                    Vi presenterer et variert program, med alt fra norsk folkemusikk til latin-amerikanske rytmer.<br /><br />
+                                    
+                                    Vi håper du vil bli med å feire oss! Dette er en konsert du ikke vil gå glipp av.<br /><br />
+                                    <i>Billetter slippes snart.</i>
                                 </Typography>             
                             </Paper>
                         </Grid>

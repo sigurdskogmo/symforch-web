@@ -95,7 +95,12 @@ const AboutView = () => {
                                     <b>E-post:</b> <a href='mailto:symforch@samfundet.no'>symforch@samfundet.no</a><br />
                                     <b>Telefon:</b> 941 95 440 (Andreas Klavenes Berg)<br />
                                     <b>Facebook:</b> <a href='https://www.facebook.com/symforch'>www.facebook.com/symforch</a><br />
-                                    <b>Instagram:</b> <a href='https://www.instagram.com/symforch/'>www.instagram.com/symforch/</a>
+                                    <b>Instagram:</b> <a href='https://www.instagram.com/symforch/'>www.instagram.com/symforch/</a><br /><br />
+                                    <b>Adresse:</b><br />
+                                    Studentersamfundets Symfoniorkester<br />
+                                    Studentersamfundet i Trondhjem<br />
+                                    Elgesetergate 1<br />
+                                    7030 TRONDHEIM<br />
                                 </Typography>
                                 <br />
                                 <Logo className={classes.logo}/>               

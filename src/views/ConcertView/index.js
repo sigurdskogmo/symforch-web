@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const ConcertView = () => {
+    document.title = "Konserter";
     const classes = useStyles();
     return (
         <div className={classes.root}>

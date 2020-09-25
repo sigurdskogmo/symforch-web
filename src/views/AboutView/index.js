@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const AboutView = () => {
+    document.title = "Om";
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -103,7 +104,7 @@ const AboutView = () => {
                                     7030 TRONDHEIM<br />
                                 </Typography>
                                 <br />
-                                <Logo className={classes.logo}/>               
+                                <Logo className={classes.logo} version={'original'}/>               
                             </Paper>
                         </Grid>
                         <Grid item lg={12} md={12} xs={12}>

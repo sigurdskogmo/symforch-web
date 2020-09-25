@@ -89,7 +89,7 @@ const TopBar = () => {
 
     return (
         <div>
-            <AppBar position="static" color='secondary'>
+            <AppBar position="fixed" color='secondary'>
                 <Toolbar className={classes.toolbar}>
                     <NavLink to={ROUTES.HOME}>
                         <Logo className={classes.logo}/>
@@ -144,6 +144,7 @@ const TopBar = () => {
                     </Popper>
                 </Toolbar>
             </AppBar>
+            <Toolbar />
         </div>
     )
 }

@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     },
     img: {
         maxWidth: '100%'
+    },
+    canceled: {
+        textDecoration: 'line-through'
     }
   }));
 
@@ -89,9 +92,9 @@ const ConcertView = () => {
                                 </Typography>
                                 <br />
                                 <Typography component="p" variant="h5">
-                                    Samfundsmøte
+                                    Samfundsmøte (AVLYST)
                                 </Typography>
-                                <Typography component="p" variant="body1">
+                                <Typography component="p" variant="body1" className={classes.canceled}>
                                     <b>Når: </b>7. november<br />
                                     <b>Hvor: </b>Storsalen, Studentersamfundet
                                 </Typography>

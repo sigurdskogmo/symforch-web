@@ -9,7 +9,7 @@ const Copyright = () => {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://symforch.no">
-            symforch
+            Symforch
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}

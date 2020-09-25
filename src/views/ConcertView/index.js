@@ -51,7 +51,7 @@ const ConcertView = () => {
                         <Grid item xs={12} md={8} lg={8}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
-                                    Kommende konserter
+                                    Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
                                     Festkonsert
@@ -69,6 +69,7 @@ const ConcertView = () => {
                                     Vi presenterer et variert program, med alt fra norsk folkemusikk til latin-amerikanske rytmer.<br /><br />
                                     
                                     Vi håper du vil bli med å feire oss! Dette er en konsert du ikke vil gå glipp av.<br /><br />
+                                    Se <a href='https://www.facebook.com/events/326619568414900'>event</a> på Facebook.<br />
                                     <i>Billetter slippes snart.</i>
                                 </Typography>             
                             </Paper>
@@ -76,20 +77,41 @@ const ConcertView = () => {
                         <Grid item xs={12} md={4} lg={4}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
-                                    Blæææ
+                                    Kommende konserter
+                                </Typography>
+                                <br />
+                                <Typography component="p" variant="h5">
+                                    Festkonsert
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    Hehe
-                                </Typography>               
+                                    <b>Når: </b>6. oktober<br />
+                                    <b>Hvor: </b>Storsalen, Studentersamfundet
+                                </Typography>
+                                <br />
+                                <Typography component="p" variant="h5">
+                                    Samfundsmøte
+                                </Typography>
+                                <Typography component="p" variant="body1">
+                                    <b>Når: </b>7. november<br />
+                                    <b>Hvor: </b>Storsalen, Studentersamfundet
+                                </Typography>
+                                <br />
+                                <Typography component="p" variant="h5">
+                                    Konsert i Frimurerlogen
+                                </Typography>
+                                <Typography component="p" variant="body1">
+                                    <b>Når: </b>22. november<br />
+                                    <b>Hvor: </b>Storsalen, Frimurerlogen
+                                </Typography>
                             </Paper>
                         </Grid>
-                        <Grid item lg={12}>
+                        <Grid item lg={12} md={12} xs={12}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
-                                    Mer ting og tang
+                                    Tidligere konserter
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl magna, cursus sit amet turpis eget, lobortis vestibulum sem. Fusce nec enim efficitur, suscipit erat eget, aliquet magna. Duis euismod sollicitudin congue. In hac habitasse platea dictumst. Aliquam dui eros, tempus ac arcu eget, posuere vehicula elit. Donec interdum enim dignissim urna pellentesque feugiat. Mauris id facilisis tellus. Curabitur lobortis tellus diam, a elementum est lobortis venenatis. Etiam bibendum arcu risus, id feugiat leo commodo non. Vivamus sem velit, molestie sodales nunc maximus, pulvinar ultricies tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam convallis id dolor pretium viverra. Suspendisse vel viverra ligula. Cras vulputate, leo ut viverra eleifend, nisi nulla ultricies magna, in congue nisi orci id elit. Integer vitae eros eu arcu vehicula consectetur nec at ligula. Proin ut neque magna.
+                                    Legges inn snart
                                 </Typography>               
                             </Paper>
                         </Grid>

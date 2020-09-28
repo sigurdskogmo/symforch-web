@@ -3,7 +3,10 @@
 }
  */
 
- a {
+a {
    text-decoration: underline;
-   color: #ee1d23;
- }
+   color: #AE0000;
+}
+a:hover {
+  color: #ee1d23;
+}

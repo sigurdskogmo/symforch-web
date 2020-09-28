@@ -3,16 +3,18 @@ import React from 'react';
 // MUI
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-import Copyright from '../../components/Copyright';
 import Img from '../../components/Img';
 import notfound from '../../assets/notfound.svg';
 import { NavLink } from 'react-router-dom';
 
+
+// Copyright
+//import Copyright from '../../components/Copyright';
+//import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -63,9 +65,9 @@ const NotFound = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Box pt={4}>
+                    {/* <Box pt={4}>
                         <Copyright />
-                    </Box>
+                    </Box> */}
                 </Container>
             </main>
         </div>

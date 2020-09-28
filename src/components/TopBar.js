@@ -44,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(1),
     },
     menuLinks: {
-        color: '#000000'
+        color: '#000000',
+        textDecoration: 'none'
     }
   }));
  
@@ -72,7 +73,7 @@ const TopBar = () => {
     }
 
     const handleListKeyDown = (event) => {
-        if (event.key === 'Tab') {
+        if (event.key === 'Escape') {
             event.preventDefault();
             setOpen(false);
         }

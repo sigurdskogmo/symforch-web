@@ -20,6 +20,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import EventIcon from '@material-ui/icons/Event';
 import InfoIcon from '@material-ui/icons/Info';
+import Slideshow from '../../components/Slideshow';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -117,6 +118,14 @@ const HomeView = () => {
                                         </NavLink>
                                     </MenuList> 
                                 </Typography>
+                            </Paper>
+                        </Grid>
+                        <Grid item lg={12} md={12} xs={12}>
+                            <Paper className={classes.paper}>
+                                <Typography component="p" variant="h4">
+                                    Galleri
+                                </Typography>
+                                <Slideshow />
                             </Paper>
                         </Grid>
                         <Grid item lg={12} md={12} xs={12}>

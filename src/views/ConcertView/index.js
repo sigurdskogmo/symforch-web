@@ -74,7 +74,7 @@ const ConcertView = () => {
                                     
                                     Vi håper du vil bli med å feire oss! Dette er en konsert du ikke vil gå glipp av.<br /><br />
                                     Se <a href='https://www.facebook.com/events/326619568414900'>event</a> på Facebook.<br />
-                                    <i>Billetter slippes snart.</i>
+                                    <i>Biletter finner du <a href='https://samfundet.no/arrangement/2586-festkonsert-med-studentersamfundets-symfoniorkester-110'>her</a>.</i>
                                 </Typography>             
                             </Paper>
                         </Grid>

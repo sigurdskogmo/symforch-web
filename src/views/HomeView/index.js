@@ -96,7 +96,7 @@ const HomeView = () => {
                                     Navigasjon
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    Bruk menyknappen <MenuIcon className={classes.menuButton}/> øverst til høyre for å navigere siden<br />
+                                    Bruk menyknappene (<MenuIcon className={classes.menuButton}/> på smale skjermer) øverst til høyre for å navigere siden<br />
                                     <MenuList id="menu-list-grow">
                                         <NavLink to={'/'} className={classes.menuLinks}>
                                             <MenuItem>

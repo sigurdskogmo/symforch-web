@@ -6,10 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 
 //import Copyright from '../../components/Copyright';
 import Box from '@material-ui/core/Box';
 import Sponsors from '../../components/Sponsors';
+import Board from '../../components/Board';
 
 // Assets
 import Logo from '../../assets/Logo';
@@ -49,6 +52,8 @@ const useStyles = makeStyles((theme) => ({
 const AboutView = () => {
     document.title = "Om";
     const classes = useStyles();
+    const matches = useMediaQuery('(min-width: 700px');
+
     return (
         <div className={classes.root}>
             <main className={classes.content}>
@@ -110,41 +115,49 @@ const AboutView = () => {
                         <Grid item lg={12} md={12} xs={12}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
-                                    Styret
+                                            Styret
                                 </Typography>
-                                <Typography component="p" variant="body1">
-                                    <Grid container spacing={3}>
-                                        <Grid item lg={4}>
-                                            <b>Tittel</b><br />
-                                            Formann<br />
-                                            Nestleder<br />
-                                            Kasserer<br />
-                                            Materialforvalter<br />
-                                            Styremedlem<br />
-                                            Styremedlem<br />
-                                        </Grid>
-                                        <Grid item lg={4}>
-                                            <b>Navn</b><br />
-                                            Andreas Klavenes Berg<br />
-                                            Sheikha Al-Nasser<br />
-                                            Ingrid Sofie Lindberg<br />
-                                            Ragnhild Fluge<br />
-                                            Signe Wikeland<br />
-                                            Christine Thoresen<br />
-                                        </Grid>
-                                        <Grid item lg={4}>
-                                            <b>E-post</b><br />
-                                            <a href='mailto:symforch-formann@samfundet.no'>symforch-formann@samfundet.no</a><br />
-                                            <a href='mailto:symforch-nestleder@samfundet.no'>symforch-nestleder@samfundet.no</a><br />
-                                            <a href='mailto:symforch-kasserer@samfundet.no'>symforch-kasserer@samfundet.no</a><br />
-                                            <a href='mailto:symforch-material@samfundet.no'>symforch-material@samfundet.no</a><br />
-                                            <a href='mailto:symforch-styremedlem@samfundet.no'>symforch-styremedlem@samfundet.no</a><br />
-                                            <a href='mailto:symforch-styremedlem@samfundet.no'>symforch-styremedlem@samfundet.no</a><br />
-                                        </Grid>
-                                    </Grid>
-                                </Typography>               
+                                {
+                                    matches
+                                    ?
+                                    <div>
+                                        <Typography component="p" variant="body1">
+                                            <Grid container spacing={3}>
+                                                <Grid item lg={4}>
+                                                    <b>Tittel</b><br />
+                                                    Formann<br />
+                                                    Nestleder<br />
+                                                    Kasserer<br />
+                                                    Materialforvalter<br />
+                                                    Styremedlem<br />
+                                                    Styremedlem<br />
+                                                </Grid>
+                                                <Grid item lg={4}>
+                                                    <b>Navn</b><br />
+                                                    Andreas Klavenes Berg<br />
+                                                    Sheikha Al-Nasser<br />
+                                                    Ingrid Sofie Lindberg<br />
+                                                    Ragnhild Fluge<br />
+                                                    Signe Wikeland<br />
+                                                    Christine Thoresen<br />
+                                                </Grid>
+                                                <Grid item lg={4}>
+                                                    <b>E-post</b><br />
+                                                    <a href='mailto:symforch-formann@samfundet.no'>symforch-formann@samfundet.no</a><br />
+                                                    <a href='mailto:symforch-nestleder@samfundet.no'>symforch-nestleder@samfundet.no</a><br />
+                                                    <a href='mailto:symforch-kasserer@samfundet.no'>symforch-kasserer@samfundet.no</a><br />
+                                                    <a href='mailto:symforch-material@samfundet.no'>symforch-material@samfundet.no</a><br />
+                                                    <a href='mailto:symforch-styremedlem@samfundet.no'>symforch-styremedlem@samfundet.no</a><br />
+                                                    <a href='mailto:symforch-styremedlem@samfundet.no'>symforch-styremedlem@samfundet.no</a><br />
+                                                </Grid>
+                                            </Grid>
+                                        </Typography>
+                                    </div>
+                                    :
+                                    <Board />
+                                }             
                             </Paper>
-                        </Grid>
+                        </Grid> 
                     </Grid>
                     <Box pt={4}>
                         <Sponsors />

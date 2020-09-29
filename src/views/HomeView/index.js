@@ -17,9 +17,9 @@ import EventIcon from '@material-ui/icons/Event';
 import InfoIcon from '@material-ui/icons/Info';
 import Slideshow from '../../components/Slideshow';
 
-// Copyright
-//import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box';
 //import Copyright from '../../components/Copyright';
+import Sponsors from '../../components/Sponsors';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -160,9 +160,9 @@ const HomeView = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    {/* <Box pt={4}>
-                        <Copyright />
-                    </Box> */}
+                    <Box pt={4}>
+                        <Sponsors />
+                    </Box>
                 </Container>
                 </div>
             </main>

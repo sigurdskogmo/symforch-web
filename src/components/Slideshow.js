@@ -19,13 +19,16 @@ const useStyles = makeStyles((theme) => ({
 const Slideshow = () => {
     const images = [
         {
-            src: slide1
+            src: slide1,
+            alt: 'Bilde fra promenadekonserten fra UKA 2019 med sangsolist'
         },
         {
-            src: slide2
+            src: slide2,
+            alt: 'Bilde fra promenadekonserten fra UKA 2019 med dirigent Gavin David Lee i fokus'
         },
         {
-            src: slide3
+            src: slide3,
+            alt: 'Bilde fra konserten "borte bra, storsalen best" februar 2020'
         }
     ];
 
@@ -38,7 +41,7 @@ const Slideshow = () => {
                 autoPlay={false}
             >
                 {
-                    images.map((image, i) => <Img source={image.src} className={classes.img}/>)
+                    images.map((image, i) => <Img source={image.src} alt={image.alt} className={classes.img}/>)
                 }
             </Carousel>
         </div>

@@ -7,9 +7,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-// Copyright
 //import Copyright from '../../components/Copyright';
-//import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box';
+import Sponsors from '../../components/Sponsors';
 
 // Assets
 import Logo from '../../assets/Logo';
@@ -146,9 +146,9 @@ const AboutView = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    {/* <Box pt={4}>
-                        <Copyright />
-                    </Box> */}
+                    <Box pt={4}>
+                        <Sponsors />
+                    </Box>
                 </Container>
                 </div>
             </main>

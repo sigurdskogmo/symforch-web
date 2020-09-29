@@ -16,6 +16,7 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // Material icons
 import MenuIcon from '@material-ui/icons/Menu';
@@ -39,19 +40,23 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         height: 48,
         maxHeight: 64,
-    } ,
+    },
     menuIcons: {
         marginRight: theme.spacing(1),
     },
     menuLinks: {
         color: '#000000',
         textDecoration: 'none'
+    },
+    desktop: {
+        display: 'flex'
     }
   }));
  
 const TopBar = () => {
     const classes = useStyles();
-
+    const matches = useMediaQuery('(min-width: 600px');
+    
     /** 
      * This part until the return could and probably should
      * be put into a separate component that handles the menu
@@ -90,59 +95,89 @@ const TopBar = () => {
 
     return (
         <div>
+            {matches ? console.log("Larger than 600px") : console.log("Smaller than 600px")}
             <AppBar position="fixed" color='secondary'>
                 <Toolbar className={classes.toolbar}>
                     <NavLink to={ROUTES.HOME}>
                         <Logo className={classes.logo}/>
                     </NavLink>
                     <div className={classes.root}></div>
-                    <IconButton 
-                        edge="end" 
-                        className={classes.menuButton} 
-                        color="inherit" 
-                        aria-label="menu"
-                        ref={anchorRef}
-                        aria-controls={open ? 'menu-list-grow' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleToggle}
-                    >
-                        {
-                            open ? <MenuOpenIcon /> : <MenuIcon />
-                        }
-                    </IconButton>
-                    <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-                    {({ TransitionProps, placement }) => (
-                        <Grow
-                            {...TransitionProps}
-                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                        >
-                        <Paper>
-                            <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <NavLink to={ROUTES.HOME} className={classes.menuLinks}>
-                                        <MenuItem onClick={handleClose}>
-                                            <HomeIcon className={classes.menuIcons} color={'primary'}/>
-                                            Forsiden
-                                        </MenuItem>
-                                    </NavLink>
-                                    <NavLink to={ROUTES.CONCERTS} className={classes.menuLinks}>
-                                        <MenuItem onClick={handleClose}>
-                                            <EventIcon className={classes.menuIcons} color={'primary'}/>
-                                            Konserter
-                                        </MenuItem>
-                                    </NavLink>
-                                    <NavLink to={ROUTES.ABOUT} className={classes.menuLinks}>
-                                        <MenuItem onClick={handleClose}>
-                                            <InfoIcon className={classes.menuIcons} color={'primary'}/>
-                                            Om orkesteret
-                                        </MenuItem>
-                                    </NavLink>
-                                </MenuList>
-                            </ClickAwayListener>
-                        </Paper>
-                        </Grow>
-                    )}
-                    </Popper>
+                    
+                    {
+                        matches 
+                        ?
+                        <div className={classes.desktop}>
+                            <NavLink to={ROUTES.HOME} className={classes.menuLinks}>
+                                <MenuItem>
+                                    <HomeIcon className={classes.menuIcons} color={'primary'}/>
+                                    Forsiden
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to={ROUTES.CONCERTS} className={classes.menuLinks}>
+                                <MenuItem>
+                                    <EventIcon className={classes.menuIcons} color={'primary'}/>
+                                    Konserter
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to={ROUTES.ABOUT} className={classes.menuLinks}>
+                                <MenuItem>
+                                    <InfoIcon className={classes.menuIcons} color={'primary'}/>
+                                    Om orkesteret
+                                </MenuItem>
+                            </NavLink>
+                        </div>
+                        :
+                        <div>
+                            <IconButton 
+                                edge="end" 
+                                className={classes.menuButton} 
+                                color="inherit" 
+                                aria-label="menu"
+                                ref={anchorRef}
+                                aria-controls={open ? 'menu-list-grow' : undefined}
+                                aria-haspopup="true"
+                                onClick={handleToggle}
+                            >
+                                {
+                                    open ? <MenuOpenIcon /> : <MenuIcon />
+                                }
+                            </IconButton>
+                            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                            {({ TransitionProps, placement }) => (
+                                <Grow
+                                    {...TransitionProps}
+                                    style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                                >
+                                <Paper>
+                                    <ClickAwayListener onClickAway={handleClose}>
+                                        <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                            <NavLink to={ROUTES.HOME} className={classes.menuLinks}>
+                                                <MenuItem onClick={handleClose}>
+                                                    <HomeIcon className={classes.menuIcons} color={'primary'}/>
+                                                    Forsiden
+                                                </MenuItem>
+                                            </NavLink>
+                                            <NavLink to={ROUTES.CONCERTS} className={classes.menuLinks}>
+                                                <MenuItem onClick={handleClose}>
+                                                    <EventIcon className={classes.menuIcons} color={'primary'}/>
+                                                    Konserter
+                                                </MenuItem>
+                                            </NavLink>
+                                            <NavLink to={ROUTES.ABOUT} className={classes.menuLinks}>
+                                                <MenuItem onClick={handleClose}>
+                                                    <InfoIcon className={classes.menuIcons} color={'primary'}/>
+                                                    Om orkesteret
+                                                </MenuItem>
+                                            </NavLink>
+                                        </MenuList>
+                                    </ClickAwayListener>
+                                </Paper>
+                                </Grow>
+                            )}
+                            </Popper>
+                        </div>
+                    }
+                    
                 </Toolbar>
             </AppBar>
             <Toolbar />

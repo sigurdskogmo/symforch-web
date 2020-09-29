@@ -11,9 +11,9 @@ import Container from '@material-ui/core/Container';
 import Img from '../../components/Img';
 import festkonsert_banner from '../../assets/festkonsert_banner.jpg';
 
-// Copyright
-//import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box';
 //import Copyright from '../../components/Copyright';
+import Sponsors from '../../components/Sponsors';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -62,7 +62,7 @@ const ConcertView = () => {
                                 <Typography component="p" variant="h5">
                                     Festkonsert
                                 </Typography>
-                                <Img source={festkonsert_banner} className={classes.img}/>
+                                <Img source={festkonsert_banner} alt={'Bannerplakat for festkonsert'} className={classes.img}/>
                                 <Typography component="p" variant="body1">
                                     <b>Når: </b>6. oktober kl. 20:00<br />
                                     <b>Hvor: </b>Storsalen, Studentersamfundet<br />
@@ -122,9 +122,9 @@ const ConcertView = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    {/* <Box pt={4}>
-                        <Copyright />
-                    </Box> */}
+                    <Box pt={4}>
+                        <Sponsors />
+                    </Box>
                 </Container>
                 </div>
             </main>

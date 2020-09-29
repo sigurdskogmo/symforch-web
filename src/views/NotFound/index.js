@@ -11,10 +11,9 @@ import Img from '../../components/Img';
 import notfound from '../../assets/notfound.svg';
 import { NavLink } from 'react-router-dom';
 
-
-// Copyright
 //import Copyright from '../../components/Copyright';
-//import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box';
+import Sponsors from '../../components/Sponsors';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,7 +53,7 @@ const NotFound = () => {
                                     NOT FOUND
                                 </Typography>
                                 <br />
-                                <Img source={notfound} className={classes.img}/>
+                                <Img source={notfound} alt="404 image in the style of sheet music" className={classes.img}/>
                                 <br />
                                 <Typography component="p" variant="body1">
                                     Siden du leter etter finnes ikke... gå til <NavLink to='/'>forsiden</NavLink>!<br /><br />
@@ -65,9 +64,9 @@ const NotFound = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    {/* <Box pt={4}>
-                        <Copyright />
-                    </Box> */}
+                    <Box pt={4}>
+                        <Sponsors />
+                    </Box>
                 </Container>
             </main>
         </div>

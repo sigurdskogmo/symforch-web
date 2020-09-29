@@ -28,7 +28,8 @@ const Slideshow = () => {
         },
         {
             src: slide3,
-            alt: 'Bilde fra konserten "borte bra, storsalen best" februar 2020'
+            alt: 'Bilde fra konserten "borte bra, storsalen best" februar 2020',
+            credit: 'Foto: foto.samfundet.no'
         }
     ];
 
@@ -41,7 +42,7 @@ const Slideshow = () => {
                 autoPlay={false}
             >
                 {
-                    images.map((image, i) => <Img source={image.src} alt={image.alt} className={classes.img}/>)
+                    images.map((image, i) => <Img source={image.src} alt={image.alt} credit={image.credit} className={classes.img}/>)
                 }
             </Carousel>
         </div>

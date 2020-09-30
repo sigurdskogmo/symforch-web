@@ -4,30 +4,46 @@ import { makeStyles } from '@material-ui/core/styles';
 import ntnu_logo from '../assets/ntnu_logo.svg';
 import vt_logo from '../assets/vt_logo.svg';
 
+import Grid from '@material-ui/core/Grid';
+
+
+
+
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        display: 'flex'
+        display: 'flex',
     },
     img: {
-        maxWidth: '50%',
-        float: 'left',
+        maxWidth: '75px',
+        margin: theme.spacing(1)
     },
-    center: {
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        maxWidth: '25%',
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        paddingTop: theme.spacing(4)
+    },
+    items: {
+        justifyContent: 'center'
     }
 }));
 
 const Sponsors = () => {
     const classes = useStyles();
     return (
-        <div align="center" className={classes.wrapper}>
-            <div className={classes.center}>
-                <Img source={ntnu_logo} alt={"NTNUs logo"} className={classes.img}/>
-                <Img source={vt_logo} alt={"Velferdstingets logo"} className={classes.img}/>
-            </div>   
+        <div className={classes.wrapper}>
+                <Grid container spacing={3} className={classes.container}>
+                    <Grid item xs={12} md={12} lg={12}>
+                        <Grid container className={classes.items}>
+                            <Img source={ntnu_logo} alt={"NTNUs logo"} className={classes.img}/>
+                            <Img source={vt_logo} alt={"Velferdstingets logo"} className={classes.img}/>
+                        </Grid>
+                       
+                    </Grid>
+                </Grid>
+
+            {/* <div className={classes.center}>
+                
+            </div>    */}
         </div>
     )
 }

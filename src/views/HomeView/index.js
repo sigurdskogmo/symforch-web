@@ -17,7 +17,6 @@ import EventIcon from '@material-ui/icons/Event';
 import InfoIcon from '@material-ui/icons/Info';
 import Slideshow from '../../components/Slideshow';
 
-import Box from '@material-ui/core/Box';
 //import Copyright from '../../components/Copyright';
 import Sponsors from '../../components/Sponsors';
 
@@ -160,9 +159,7 @@ const HomeView = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Box pt={4}>
-                        <Sponsors />
-                    </Box>
+                    <Sponsors />
                 </Container>
                 </div>
             </main>

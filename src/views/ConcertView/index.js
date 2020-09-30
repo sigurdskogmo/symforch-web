@@ -11,7 +11,6 @@ import Container from '@material-ui/core/Container';
 import Img from '../../components/Img';
 import festkonsert_banner from '../../assets/festkonsert_banner.jpg';
 
-import Box from '@material-ui/core/Box';
 //import Copyright from '../../components/Copyright';
 import Sponsors from '../../components/Sponsors';
 
@@ -122,9 +121,7 @@ const ConcertView = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Box pt={4}>
-                        <Sponsors />
-                    </Box>
+                    <Sponsors />
                 </Container>
                 </div>
             </main>

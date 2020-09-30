@@ -12,7 +12,6 @@ import notfound from '../../assets/notfound.svg';
 import { NavLink } from 'react-router-dom';
 
 //import Copyright from '../../components/Copyright';
-import Box from '@material-ui/core/Box';
 import Sponsors from '../../components/Sponsors';
 
 const useStyles = makeStyles((theme) => ({
@@ -64,9 +63,7 @@ const NotFound = () => {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Box pt={4}>
-                        <Sponsors />
-                    </Box>
+                    <Sponsors />
                 </Container>
             </main>
         </div>

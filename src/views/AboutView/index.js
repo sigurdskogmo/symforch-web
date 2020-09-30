@@ -10,7 +10,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 //import Copyright from '../../components/Copyright';
-import Box from '@material-ui/core/Box';
 import Sponsors from '../../components/Sponsors';
 import Board from '../../components/Board';
 
@@ -106,7 +105,7 @@ const AboutView = () => {
                                     Studentersamfundets Symfoniorkester<br />
                                     Studentersamfundet i Trondhjem<br />
                                     Elgesetergate 1<br />
-                                    7030 TRONDHEIM<br />
+                                    7030 TRONDHEIM<br /><br />
                                 </Typography>
                                 <br />
                                 <Logo className={classes.logo} version={'original'}/>               
@@ -159,9 +158,7 @@ const AboutView = () => {
                             </Paper>
                         </Grid> 
                     </Grid>
-                    <Box pt={4}>
-                        <Sponsors />
-                    </Box>
+                    <Sponsors />
                 </Container>
                 </div>
             </main>

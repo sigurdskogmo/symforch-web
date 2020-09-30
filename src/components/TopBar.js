@@ -48,6 +48,15 @@ const useStyles = makeStyles((theme) => ({
         color: '#000000',
         textDecoration: 'none'
     },
+    activeMenuLinks: {
+        color: '#000000',
+        backgroundColor: '#f5f5f5',
+        borderBottom: 'solid',
+        borderBottomColor: '#ee1d23'
+    },
+    activeMobileLinks: {
+        textDecoration: "underline",
+    },
     desktop: {
         display: 'flex'
     }
@@ -107,19 +116,19 @@ const TopBar = () => {
                         matches 
                         ?
                         <div className={classes.desktop}>
-                            <NavLink to={ROUTES.HOME} className={classes.menuLinks}>
+                            <NavLink exact to={ROUTES.HOME} className={classes.menuLinks} activeClassName={classes.activeMenuLinks}>
                                 <MenuItem>
                                     <HomeIcon className={classes.menuIcons} color={'primary'}/>
                                     Forsiden
                                 </MenuItem>
                             </NavLink>
-                            <NavLink to={ROUTES.CONCERTS} className={classes.menuLinks}>
+                            <NavLink exact to={ROUTES.CONCERTS} className={classes.menuLinks} activeClassName={classes.activeMenuLinks}>
                                 <MenuItem>
                                     <EventIcon className={classes.menuIcons} color={'primary'}/>
                                     Konserter
                                 </MenuItem>
                             </NavLink>
-                            <NavLink to={ROUTES.ABOUT} className={classes.menuLinks}>
+                            <NavLink exact to={ROUTES.ABOUT} className={classes.menuLinks} activeClassName={classes.activeMenuLinks}>
                                 <MenuItem>
                                     <InfoIcon className={classes.menuIcons} color={'primary'}/>
                                     Om orkesteret
@@ -151,19 +160,19 @@ const TopBar = () => {
                                 <Paper>
                                     <ClickAwayListener onClickAway={handleClose}>
                                         <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                            <NavLink to={ROUTES.HOME} className={classes.menuLinks}>
+                                            <NavLink exact to={ROUTES.HOME} className={classes.menuLinks} activeClassName={classes.activeMobileLinks}>
                                                 <MenuItem onClick={handleClose}>
                                                     <HomeIcon className={classes.menuIcons} color={'primary'}/>
                                                     Forsiden
                                                 </MenuItem>
                                             </NavLink>
-                                            <NavLink to={ROUTES.CONCERTS} className={classes.menuLinks}>
+                                            <NavLink exact to={ROUTES.CONCERTS} className={classes.menuLinks} activeClassName={classes.activeMobileLinks}>
                                                 <MenuItem onClick={handleClose}>
                                                     <EventIcon className={classes.menuIcons} color={'primary'}/>
                                                     Konserter
                                                 </MenuItem>
                                             </NavLink>
-                                            <NavLink to={ROUTES.ABOUT} className={classes.menuLinks}>
+                                            <NavLink exact to={ROUTES.ABOUT} className={classes.menuLinks} activeClassName={classes.activeMobileLinks}>
                                                 <MenuItem onClick={handleClose}>
                                                     <InfoIcon className={classes.menuIcons} color={'primary'}/>
                                                     Om orkesteret

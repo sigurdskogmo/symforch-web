@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 
 // MUI
 import Paper from '@material-ui/core/Paper';
@@ -7,14 +7,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
+//import MenuItem from '@material-ui/core/MenuItem';
+//import MenuList from '@material-ui/core/MenuList';
 
 // Material icons
-import MenuIcon from '@material-ui/icons/Menu';
-import HomeIcon from '@material-ui/icons/Home';
-import EventIcon from '@material-ui/icons/Event';
-import InfoIcon from '@material-ui/icons/Info';
+//import MenuIcon from '@material-ui/icons/Menu';
+//import HomeIcon from '@material-ui/icons/Home';
+//import EventIcon from '@material-ui/icons/Event';
+//import InfoIcon from '@material-ui/icons/Info';
 import Slideshow from '../../components/Slideshow';
 
 //import Copyright from '../../components/Copyright';
@@ -59,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
     fixedHeight: {
         height: 400,
     },
+    slideshow: {
+        minHeight: '600px'
+    }
   }));
 
 const HomeView = () => {
@@ -70,7 +73,7 @@ const HomeView = () => {
                 <div>
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12} md={8} lg={8}>
+                        <Grid item xs={12} md={12} lg={4}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
                                     Velkommen til Studentersamfundets Symfoniorkester!             
@@ -89,7 +92,7 @@ const HomeView = () => {
                                           
                             </Paper>
                         </Grid>
-                        <Grid item xs={12} md={4} lg={4}>
+                        {/* <Grid item xs={12} md={4} lg={4}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
                                     Navigasjon
@@ -118,13 +121,13 @@ const HomeView = () => {
                                     </MenuList> 
                                 </Typography>
                             </Paper>
-                        </Grid>
-                        <Grid item lg={12} md={12} xs={12}>
+                        </Grid> */}
+                        <Grid item lg={8} md={12} xs={12}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
                                     Galleri
                                 </Typography>
-                                <Slideshow />
+                                <Slideshow minHeight={400}/>
                             </Paper>
                         </Grid>
                         <Grid item lg={12} md={12} xs={12}>

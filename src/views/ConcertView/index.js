@@ -59,7 +59,7 @@ const ConcertView = () => {
                                     Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
-                                    Festkonsert
+                                    Festkonsert (UTSOLGT)
                                 </Typography>
                                 <Img source={festkonsert_banner} alt={'Bannerplakat for festkonsert'} className={classes.img}/>
                                 <Typography component="p" variant="body1">
@@ -86,7 +86,7 @@ const ConcertView = () => {
                                 </Typography>
                                 <br />
                                 <Typography component="p" variant="h5">
-                                    Festkonsert
+                                    Festkonsert (UTSOLGT)
                                 </Typography>
                                 <Typography component="p" variant="body1">
                                     <b>Når: </b>6. oktober<br />

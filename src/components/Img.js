@@ -6,14 +6,14 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        textAlign: 'center'
+        textAlign: 'center', 
     },
   }));
 
 const Img = (props) => {
     const classes = useStyles();
     return(
-        <div className={classes.root}>
+        <div style={{height: props.totalheight}}>
             <img src={props.source} alt={props.alt} className={props.className}/><br />
             <div className={classes.credit}>{props.credit}</div>
         </div>

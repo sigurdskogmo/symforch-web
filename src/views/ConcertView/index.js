@@ -10,9 +10,11 @@ import Container from '@material-ui/core/Container';
 // Components
 import Img from '../../components/Img';
 import festkonsert_banner from '../../assets/festkonsert_banner.jpg';
+import Video from '../../components/Video';
 
 //import Copyright from '../../components/Copyright';
 import Sponsors from '../../components/Sponsors';
+import UpcomingItem from '../../components/UpcomingItem';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -59,23 +61,14 @@ const ConcertView = () => {
                                     Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
-                                    Festkonsert (UTSOLGT)
+                                    Konsert i Frimurerlogen
                                 </Typography>
-                                <Img source={festkonsert_banner} alt={'Bannerplakat for festkonsert'} className={classes.img}/>
+                                {/*<Img source={festkonsert_banner} alt={'Bannerplakat for festkonsert'} className={classes.img}/>*/}
                                 <Typography component="p" variant="body1">
-                                    <b>Når: </b>6. oktober kl. 20:00<br />
-                                    <b>Hvor: </b>Storsalen, Studentersamfundet<br />
+                                    <b>Når: </b>22. november<br />
+                                    <b>Hvor: </b>Storsalen, Frimurerlogen<br />
                                     <b>Hva: </b>
-                                    1910 startet en gruppe studenter og musikere i Trondheim sitt eget musikalorkester. 
-                                    I løpet av tiden vokste vi, og ble fort et fullt symfoniorkester som har funnet 
-                                    sitt hjem i Storsalen. I år blir vi hele 110år! 
-                                    Dette må selvfølgelig feires slik vi liker best: med en staselig festkonsert.<br /><br />
-                                    
-                                    Vi presenterer et variert program, med alt fra norsk folkemusikk til latin-amerikanske rytmer.<br /><br />
-                                    
-                                    Vi håper du vil bli med å feire oss! Dette er en konsert du ikke vil gå glipp av.<br /><br />
-                                    Se <a href='https://www.facebook.com/events/326619568414900'>event</a> på Facebook.<br />
-                                    <i>Biletter finner du <a href='https://samfundet.no/arrangement/2586-festkonsert-med-studentersamfundets-symfoniorkester-110'>her</a>.</i>
+                                    Nærmere informasjon kommer.
                                 </Typography>             
                             </Paper>
                         </Grid>
@@ -85,29 +78,17 @@ const ConcertView = () => {
                                     Kommende konserter
                                 </Typography>
                                 <br />
-                                <Typography component="p" variant="h5">
-                                    Festkonsert (UTSOLGT)
-                                </Typography>
-                                <Typography component="p" variant="body1">
-                                    <b>Når: </b>6. oktober<br />
-                                    <b>Hvor: </b>Storsalen, Studentersamfundet
-                                </Typography>
-                                <br />
-                                <Typography component="p" variant="h5">
-                                    Samfundsmøte (AVLYST)
-                                </Typography>
-                                <Typography component="p" variant="body1" className={classes.canceled}>
-                                    <b>Når: </b>7. november<br />
-                                    <b>Hvor: </b>Storsalen, Studentersamfundet
-                                </Typography>
-                                <br />
-                                <Typography component="p" variant="h5">
-                                    Konsert i Frimurerlogen
-                                </Typography>
-                                <Typography component="p" variant="body1">
-                                    <b>Når: </b>22. november<br />
-                                    <b>Hvor: </b>Storsalen, Frimurerlogen
-                                </Typography>
+                                <UpcomingItem 
+                                    title={"Samfundsmøte (AVLYST)"}
+                                    date={"7. november"}
+                                    location={"Storsalen, Studentersamfundet"}
+                                    canceled
+                                />
+                                <UpcomingItem 
+                                    title={"Konsert i Frimurerlogen"}
+                                    date={"22. november"}
+                                    location={"Storsalen, Frimurerlogen"}
+                                />
                             </Paper>
                         </Grid>
                         <Grid item lg={12} md={12} xs={12}>
@@ -115,9 +96,24 @@ const ConcertView = () => {
                                 <Typography component="p" variant="h4">
                                     Tidligere konserter
                                 </Typography>
+                                <Typography component="p" variant="h5">
+                                    Festkonsert
+                                </Typography>
+                                <Img source={festkonsert_banner} alt={'Bannerplakat for festkonsert'} className={classes.img}/>
                                 <Typography component="p" variant="body1">
-                                    Legges inn snart
-                                </Typography>               
+                                    <b>Når: </b>6. oktober kl. 20:00<br />
+                                    <b>Hvor: </b>Storsalen, Studentersamfundet<br />
+                                    <b>Hva: </b>
+                                    1910 startet en gruppe studenter og musikere i Trondheim sitt eget musikalorkester. 
+                                    I løpet av tiden vokste vi, og ble fort et fullt symfoniorkester som har funnet 
+                                    sitt hjem i Storsalen. I 2020 ble vi hele 110år! 
+                                    Dette måtte vi selvfølgelig feire slik vi liker best: med en staselig festkonsert.<br /><br />
+                                    
+                                    Vi presenterte et variert program, med alt fra norsk folkemusikk til latin-amerikanske rytmer.<br /><br />
+                                    
+                                    <i>Opptak av konserten kan ses på <a href='https://youtu.be/OEVUkf47IPA'>YouTube</a>.</i>
+                                </Typography>
+                                <Video title={"festkonsert_yt_embed"}/>
                             </Paper>
                         </Grid>
                     </Grid>

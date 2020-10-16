@@ -6,3 +6,9 @@ Options -MultiViews
 Redirect /plan https://docs.google.com/document/d/1KZJJWKr5qJSMoZ2Tupko4uhVKHfj8YF8yAMXaoxprM0/edit
 
 Redirect /gong https://gong.symforch.no
+
+Redirect /kalender https://calendar.google.com/calendar/embed?src=4jic2spq3fi7da2559udi08o4k%40group.calendar.google.com&ctz=Europe/Oslo&hl=no&wkst=2
+
+Redirect /noter https://drive.google.com/folderview?id=0B-1DPtDiEgd_c2psNzVlcVc3TlU&usp=sharing
+
+Redirect /ov https://laafte.samfundet.no/ovingsspeilet/

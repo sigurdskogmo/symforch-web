@@ -4,3 +4,5 @@ Options -MultiViews
     RewriteRule ^ index.html [QSA,L]
 
 Redirect /plan https://docs.google.com/document/d/1KZJJWKr5qJSMoZ2Tupko4uhVKHfj8YF8yAMXaoxprM0/edit
+
+Redirect /gong https://gong.symforch.no

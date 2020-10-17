@@ -1,0 +1,40 @@
+name: build-and-deploy-via-scp
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+    
+    steps:
+    # Run npm build
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run build --if-present
+      env:
+        CI: true
+      
+    - name: Copy files to server
+      uses: horochx/deploy-via-scp@v1.0.1
+      with:
+        local: localPath # eg: dist/*
+        remote: ${{ secrets.REMOTE }} # eg: /home/github-action/www
+        host: ${{ secrets.HOST }} # eg: example.com
+        port: ${{ secrets.PORT }} # eg: 22          user: ${{ secrets.USER }} # eg: github-action
+        key: ${{ secrets.KEY }} # eg: -----BEGIN OPENSSH PRIVATE KEY-----\nHEIiyzh5cT7hN...

@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
     
     steps:
     # Run npm build
@@ -36,5 +36,6 @@ jobs:
         local: localPath # eg: dist/*
         remote: ${{ secrets.REMOTE }} # eg: /home/github-action/www
         host: ${{ secrets.HOST }} # eg: example.com
-        port: ${{ secrets.PORT }} # eg: 22          user: ${{ secrets.USER }} # eg: github-action
+        port: ${{ secrets.PORT }} # eg: 22          
+        user: ${{ secrets.USER }} # eg: github-action
         key: ${{ secrets.KEY }} # eg: -----BEGIN OPENSSH PRIVATE KEY-----\nHEIiyzh5cT7hN...

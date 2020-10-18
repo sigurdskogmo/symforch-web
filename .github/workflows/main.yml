@@ -27,4 +27,11 @@ jobs:
       run: npm run build
       
     - name: Copy files to server with scp
-      run: scp -i ${{ secrets.ID_RSA }} build ${{ secrets.USERNAME}}@${{ secrets.HOST }}:${{ secrets.DESTINATION }}
+    - uses: horochx/deploy-via-scp@master
+      with:
+        local: build/* # eg: dist/*
+        remote: ${{ secrets.REMOTE }} # eg: /home/github-action/www
+        host: ${{ secrets.HOST }} # eg: example.com
+        port: ${{ secrets.PORT }} # eg: 22
+        user: ${{ secrets.USER }} # eg: github-action
+        key: ${{ secrets.KEY }} # eg: -----BEGIN OPENSSH PRIVATE KEY-----\nHEIiyzh5cT7hN...

@@ -22,5 +22,4 @@ jobs:
     - name: Firebase Deploy
       run: |
         sudo npm install -g firebase-tools
-        firebase use --add symforch-dev
         firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}

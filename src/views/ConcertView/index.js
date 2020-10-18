@@ -111,7 +111,7 @@ const ConcertView = () => {
                                     
                                     Vi presenterte et variert program, med alt fra norsk folkemusikk til latin-amerikanske rytmer.<br /><br />
                                     
-                                    <i>Opptak av konserten kan ses på <a href='https://youtu.be/OEVUkf47IPA'>YouTube</a>.</i>
+                                    <i>Opptak av konserten er lagt ut på <a href='https://youtu.be/OEVUkf47IPA'>YouTube</a>.</i>
                                 </Typography>
                                 <Video title={"festkonsert_yt_embed"}/>
                             </Paper>

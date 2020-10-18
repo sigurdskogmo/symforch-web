@@ -26,7 +26,6 @@ jobs:
     - name: Build
       run: npm run build
       
-    - name: Copy files to server with scp
     - uses: horochx/deploy-via-scp@master
       with:
         local: build/* # eg: dist/*

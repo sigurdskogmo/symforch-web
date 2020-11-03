@@ -61,14 +61,15 @@ const ConcertView = () => {
                                     Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
-                                    Konsert i Frimurerlogen
+                                    Konsert på Studentersamfundet
                                 </Typography>
                                 {/*<Img source={festkonsert_banner} alt={'Bannerplakat for festkonsert'} className={classes.img}/>*/}
                                 <Typography component="p" variant="body1">
-                                    <b>Når: </b>22. november<br />
-                                    <b>Hvor: </b>Storsalen, Frimurerlogen<br />
+                                    <b>Når: </b>24. november<br />
+                                    <b>Hvor: </b>Storsalen, Studentersamfundet<br />
                                     <b>Hva: </b>
-                                    Nærmere informasjon kommer.
+                                    Tchaikovskys 5. symfoni presenteres av Studentersamfundets Symfoniorkester tirsdag 24. november!<br/>
+                                    Mer info kommer snart.
                                 </Typography>             
                             </Paper>
                         </Grid>
@@ -85,9 +86,9 @@ const ConcertView = () => {
                                     canceled
                                 />
                                 <UpcomingItem 
-                                    title={"Konsert i Frimurerlogen"}
-                                    date={"22. november"}
-                                    location={"Storsalen, Frimurerlogen"}
+                                    title={"Konsert i Storsalen"}
+                                    date={"24. november"}
+                                    location={"Storsalen, Studentersamfundet"}
                                 />
                             </Paper>
                         </Grid>

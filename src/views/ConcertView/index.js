@@ -63,7 +63,7 @@ const ConcertView = () => {
                                     Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
-                                    Tsjaikovskijs symfoni nr. 5
+                                    Tsjaikovskijs symfoni nr. 5 (AVLYST)
                                 </Typography>
                                 <Img source={tsjaikovskij_banner} alt={'Bannerplakat for Tsjaikovski konsert'} className={classes.img}/>
                                 <Typography component="p" variant="body1">
@@ -80,7 +80,13 @@ const ConcertView = () => {
 
                                     <strong>Billetter slippes snarest!</strong><br/>
                                     Student / barn: 80kr<br/>
-                                    Ordinær: 150kr
+                                    Ordinær: 150kr<br /><br />
+
+                                    <strong>Oppdatering:</strong><br/>
+                                    Grunnet Studentersamfundets nedstenging er konserten avlyst/utsatt. Følg med på 
+                                    <a href='https://www.facebook.com/symforch'> www.facebook.com/symforch</a> for 
+                                    å få med deg eventuelle oppdateringer.
+
                                 </Typography>             
                             </Paper>
                         </Grid>
@@ -91,15 +97,10 @@ const ConcertView = () => {
                                 </Typography>
                                 <br />
                                 <UpcomingItem 
-                                    title={"Samfundsmøte (AVLYST)"}
-                                    date={"7. november"}
-                                    location={"Storsalen, Studentersamfundet"}
-                                    canceled
-                                />
-                                <UpcomingItem 
-                                    title={"Tsjaikovskijs symfoni nr. 5"}
+                                    title={"Tsjaikovskijs symfoni nr. 5 (AVLYST)"}
                                     date={"24. november"}
                                     location={"Storsalen, Studentersamfundet"}
+                                    canceled
                                 />
                             </Paper>
                         </Grid>

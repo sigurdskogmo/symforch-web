@@ -142,7 +142,7 @@ const AboutView = () => {
                                                 </Grid>
                                                 <Grid item lg={4}>
                                                     <b>E-post</b><br />
-                                                    <a href='mailto:symforch-formann@samfundet.no'>symforch-formann@samfundet.no</a><br />
+                                                    <a href='mailto:symforch-leder@samfundet.no'>symforch-leder@samfundet.no</a><br />
                                                     <a href='mailto:symforch-nestleder@samfundet.no'>symforch-nestleder@samfundet.no</a><br />
                                                     <a href='mailto:symforch-kasserer@samfundet.no'>symforch-kasserer@samfundet.no</a><br />
                                                     <a href='mailto:symforch-material@samfundet.no'>symforch-material@samfundet.no</a><br />

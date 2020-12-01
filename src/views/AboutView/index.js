@@ -124,7 +124,7 @@ const AboutView = () => {
                                             <Grid container spacing={3}>
                                                 <Grid item lg={4}>
                                                     <b>Tittel</b><br />
-                                                    Formann<br />
+                                                    Leder<br />
                                                     Nestleder<br />
                                                     Kasserer<br />
                                                     Materialforvalter<br />

@@ -21,7 +21,7 @@ const Board = () => {
             aria-labelledby="nested-list-subheader"
             className={classes.root}
         >
-            <BoardItem title="Formann" who="Andreas Klavenes Berg" email="symforch-formann@samfundet.no"/>
+            <BoardItem title="Leder" who="Andreas Klavenes Berg" email="symforch-leder@samfundet.no"/>
             <BoardItem title="Nestleder" who="Sheikha Al-Nasser" email="symforch-nestleder@samfundet.no"/>
             <BoardItem title="Kasserer" who="Ingrid Sofie Lindberg" email="symforch-kasserer@samfundet.no"/>
             <BoardItem title="Materialforvalter" who="Ragnhild Fluge" email="symforch-material@samfundet.no"/>

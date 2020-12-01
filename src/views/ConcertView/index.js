@@ -63,11 +63,11 @@ const ConcertView = () => {
                                     Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
-                                    Tsjaikovskijs symfoni nr. 5 (AVLYST)
+                                    Tsjaikovskijs symfoni nr. 5 (UTSATT)
                                 </Typography>
                                 <Img source={tsjaikovskij_banner} alt={'Bannerplakat for Tsjaikovski konsert'} className={classes.img}/>
                                 <Typography component="p" variant="body1">
-                                    <b>Når: </b>24. november kl. 19:00<br />
+                                    <b>Når: </b>Januar 2021<br />
                                     <b>Hvor: </b>Storsalen, Studentersamfundet<br />
                                     <b>Hva: </b>
                                     Velkommen til konsert med Studentersamfundets Symfoniorkester 24. november kl 19:00!<br/><br/>
@@ -78,12 +78,8 @@ const ConcertView = () => {
                                     Dette eventyret vil du ikke gå glipp av. Bli med oss da vi fyller storsalen med en av de 
                                     mer berømte symfoniene fra 1800-tallet.<br/><br/>
 
-                                    <strong>Billetter slippes snarest!</strong><br/>
-                                    Student / barn: 80kr<br/>
-                                    Ordinær: 150kr<br /><br />
-
                                     <strong>Oppdatering:</strong><br/>
-                                    Grunnet Studentersamfundets nedstenging er konserten avlyst/utsatt. Følg med på 
+                                    Grunnet Studentersamfundets nedstenging er konserten utsatt. Følg med på 
                                     <a href='https://www.facebook.com/symforch'> www.facebook.com/symforch</a> for 
                                     å få med deg eventuelle oppdateringer.
 
@@ -97,10 +93,9 @@ const ConcertView = () => {
                                 </Typography>
                                 <br />
                                 <UpcomingItem 
-                                    title={"Tsjaikovskijs symfoni nr. 5 (AVLYST)"}
-                                    date={"24. november"}
+                                    title={"Tsjaikovskijs symfoni nr. 5"}
+                                    date={"Januar 2021"}
                                     location={"Storsalen, Studentersamfundet"}
-                                    canceled
                                 />
                             </Paper>
                         </Grid>

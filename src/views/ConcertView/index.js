@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 // Components
 import Img from '../../components/Img';
 import festkonsert_banner from '../../assets/festkonsert_banner.jpg';
-import tsjaikovskij_banner from '../../assets/tsjaikovskij_banner.png';
+//import tsjaikovskij_banner from '../../assets/tsjaikovskij_banner.png';
 import Video from '../../components/Video';
 
 //import Copyright from '../../components/Copyright';
@@ -58,12 +58,12 @@ const ConcertView = () => {
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} md={8} lg={8}>
-                            <Paper className={classes.paper}>
+                            {/* <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
                                     Førstkommende konsert
                                 </Typography>
                                 <Typography component="p" variant="h5">
-                                    Tsjaikovskijs symfoni nr. 5 (UTSATT)
+                                    Tsjaikovskijs symfoni nr. 5 (AVLYST)
                                 </Typography>
                                 <Img source={tsjaikovskij_banner} alt={'Bannerplakat for Tsjaikovski konsert'} className={classes.img}/>
                                 <Typography component="p" variant="body1">
@@ -84,6 +84,19 @@ const ConcertView = () => {
                                     å få med deg eventuelle oppdateringer.
 
                                 </Typography>             
+                            </Paper> */}
+                            <Paper className={classes.paper}>
+                                <Typography component="p" variant="h4">
+                                    Angående konserter fremover
+                                </Typography>
+                                <Typography component="p" variant="body1">
+                                    På grunn av smittesituasjonen i  nå på starten av året, har konserten
+                                    som var tenkt i januar blitt avlyst. Orkesteret får dessverre ikke til å øve sammen 
+                                    før situasjonen endrer seg og restriksjonene vi er underlagt blir mindre inngripende.
+                                    <br /><br />
+                                    Vi som de fleste andre håper at situasjonen blir annerledes om ikke lenge, og at vi kan
+                                    spille konsert igjen om ikke veldig lenge.
+                                </Typography>
                             </Paper>
                         </Grid>
                         <Grid item xs={12} md={4} lg={4}>
@@ -93,9 +106,10 @@ const ConcertView = () => {
                                 </Typography>
                                 <br />
                                 <UpcomingItem 
-                                    title={"Tsjaikovskijs symfoni nr. 5"}
+                                    title={"Tsjaikovskijs symfoni nr. 5 (AVLYST)"}
                                     date={"Januar 2021"}
                                     location={"Storsalen, Studentersamfundet"}
+                                    canceled
                                 />
                             </Paper>
                         </Grid>

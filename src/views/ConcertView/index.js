@@ -90,8 +90,8 @@ const ConcertView = () => {
                                     Angående konserter fremover
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    På grunn av smittesituasjonen i  nå på starten av året, har konserten
-                                    som var tenkt i januar blitt avlyst. Orkesteret får dessverre ikke til å øve sammen 
+                                    På grunn av smittesituasjonen ble konserten
+                                    som var tenkt i januar avlyst. Orkesteret får dessverre ikke til å øve sammen 
                                     før situasjonen endrer seg og restriksjonene vi er underlagt blir mindre inngripende.
                                     <br /><br />
                                     Vi som de fleste andre håper at situasjonen blir annerledes om ikke lenge, og at vi kan
@@ -105,9 +105,9 @@ const ConcertView = () => {
                                     Kommende konserter
                                 </Typography>
                                 <br />
-                                <UpcomingItem 
-                                    title={"Tsjaikovskijs symfoni nr. 5 (AVLYST)"}
-                                    date={"Januar 2021"}
+                                <UpcomingItem
+                                    title={"Konsert (AVLYST)"}
+                                    date={"April 2021"}
                                     location={"Storsalen, Studentersamfundet"}
                                     canceled
                                 />

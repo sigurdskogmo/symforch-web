@@ -133,12 +133,12 @@ const AboutView = () => {
                                                 </Grid>
                                                 <Grid item lg={4}>
                                                     <b>Navn</b><br />
-                                                    Andreas Klavenes Berg<br />
-                                                    Sheikha Al-Nasser<br />
-                                                    Ingrid Sofie Lindberg<br />
-                                                    Ragnhild Fluge<br />
-                                                    Signe Wikeland<br />
-                                                    Christine Thoresen<br />
+                                                    Andreas Klavenes Berg<br />     {/* Leder */}
+                                                    Sunniva Bauck Dahl<br />         {/* Nestleder */}
+                                                    Ingrid Sofie Lindberg<br />     {/* Kasserer */}
+                                                    Jakob Mæhle Skjøtskift<br />            {/* Materialforvalter */}
+                                                    Signe Wikeland<br />            {/* Styremedlem */}
+                                                    Ida Fjellvær<br />        {/* Styremedlem */}
                                                 </Grid>
                                                 <Grid item lg={4}>
                                                     <b>E-post</b><br />

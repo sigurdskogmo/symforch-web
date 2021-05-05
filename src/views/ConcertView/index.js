@@ -105,12 +105,18 @@ const ConcertView = () => {
                                     Kommende konserter
                                 </Typography>
                                 <br />
-                                <UpcomingItem
+                                {/* <UpcomingItem
                                     title={"Konsert (AVLYST)"}
                                     date={"April 2021"}
                                     location={"Storsalen, Studentersamfundet"}
                                     canceled
-                                />
+                                /> */}
+                                {/* <UpcomingItem
+                                    title={"Promenadekonsert UKA-21"}
+                                    date={"Oktober 2021"}
+                                    location={"Teltet, Dødens Dal"}
+                                /> */}
+                                Studentersamfundets Symfoniorkester har ingen konserter før høsten 2021.
                             </Paper>
                         </Grid>
                         <Grid item lg={12} md={12} xs={12}>

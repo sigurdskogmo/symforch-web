@@ -52,6 +52,38 @@ const AboutView = () => {
     document.title = "Om";
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 700px');
+    const boardMembers = [
+        {
+            title: 'Styreleder',
+            who: 'Andreas Klavenes Berg',
+            email: 'symforch-leder@samfundet.no'
+        },
+        {
+            title: 'Nestleder',
+            who: 'Sunniva Bauck Dahl',
+            email: 'symforch-nestleder@samfundet.no'
+        },
+        {
+            title: 'Kasserer',
+            who: 'Ingrid Sofie Lindberg',
+            email: 'symforch-kasserer@samfundet.no'
+        },
+        {
+            title: 'Materialforvalter',
+            who: 'Jakob Mæhle Skjøtskift',
+            email: 'symforch-material@samfundet.no'
+        },
+        {
+            title: 'Styremedlem',
+            who: 'Signe Wikeland',
+            email: 'symforch-styremedlem@samfundet.no'
+        },
+        {
+            title: 'Styremedlem',
+            who: 'Ida Fjellvær',
+            email: 'symforch-styremedlem@samfundet.no'
+        }
+    ];
 
     return (
         <div className={classes.root}>
@@ -124,36 +156,36 @@ const AboutView = () => {
                                             <Grid container spacing={3}>
                                                 <Grid item lg={4}>
                                                     <b>Tittel</b><br />
-                                                    Leder<br />
-                                                    Nestleder<br />
-                                                    Kasserer<br />
-                                                    Materialforvalter<br />
-                                                    Styremedlem<br />
-                                                    Styremedlem<br />
+                                                    {boardMembers[0].title}<br />
+                                                    {boardMembers[1].title}<br />
+                                                    {boardMembers[2].title}<br />
+                                                    {boardMembers[3].title}<br />
+                                                    {boardMembers[4].title}<br />
+                                                    {boardMembers[5].title}<br />
                                                 </Grid>
                                                 <Grid item lg={4}>
                                                     <b>Navn</b><br />
-                                                    Andreas Klavenes Berg<br />     {/* Leder */}
-                                                    Sunniva Bauck Dahl<br />         {/* Nestleder */}
-                                                    Ingrid Sofie Lindberg<br />     {/* Kasserer */}
-                                                    Jakob Mæhle Skjøtskift<br />            {/* Materialforvalter */}
-                                                    Signe Wikeland<br />            {/* Styremedlem */}
-                                                    Ida Fjellvær<br />        {/* Styremedlem */}
+                                                    {boardMembers[0].who}<br />     {/* Leder */}
+                                                    {boardMembers[1].who}<br />     {/* Nestleder */}
+                                                    {boardMembers[2].who}<br />     {/* Kasserer */}
+                                                    {boardMembers[3].who}<br />     {/* Materialforvalter */}
+                                                    {boardMembers[4].who}<br />     {/* Styremedlem */}
+                                                    {boardMembers[5].who}<br />     {/* Styremedlem */}
                                                 </Grid>
                                                 <Grid item lg={4}>
                                                     <b>E-post</b><br />
-                                                    <a href='mailto:symforch-leder@samfundet.no'>symforch-leder@samfundet.no</a><br />
-                                                    <a href='mailto:symforch-nestleder@samfundet.no'>symforch-nestleder@samfundet.no</a><br />
-                                                    <a href='mailto:symforch-kasserer@samfundet.no'>symforch-kasserer@samfundet.no</a><br />
-                                                    <a href='mailto:symforch-material@samfundet.no'>symforch-material@samfundet.no</a><br />
-                                                    <a href='mailto:symforch-styremedlem@samfundet.no'>symforch-styremedlem@samfundet.no</a><br />
-                                                    <a href='mailto:symforch-styremedlem@samfundet.no'>symforch-styremedlem@samfundet.no</a><br />
+                                                    <a href={`mailto:${boardMembers[0].email}`}>{boardMembers[0].email}</a><br />
+                                                    <a href={`mailto:${boardMembers[1].email}`}>{boardMembers[1].email}</a><br />
+                                                    <a href={`mailto:${boardMembers[2].email}`}>{boardMembers[2].email}</a><br />
+                                                    <a href={`mailto:${boardMembers[3].email}`}>{boardMembers[3].email}</a><br />
+                                                    <a href={`mailto:${boardMembers[4].email}`}>{boardMembers[4].email}</a><br />
+                                                    <a href={`mailto:${boardMembers[5].email}`}>{boardMembers[5].email}</a><br />
                                                 </Grid>
                                             </Grid>
                                         </Typography>
                                     </div>
                                     :
-                                    <Board />
+                                    <Board members={boardMembers}/>
                                 }             
                             </Paper>
                         </Grid> 

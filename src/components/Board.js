@@ -13,20 +13,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Board = () => {
+const Board = (props) => {
     const classes = useStyles();
+    const boardItems = [];
+
+    for (let member in props.members) {
+      console.log(member)
+      boardItems.push(<BoardItem title={props.members[member].title} who={props.members[member].who} email={props.members[member].email}/>)
+    }
+
     return (
         <List
             component="nav"
             aria-labelledby="nested-list-subheader"
             className={classes.root}
         >
-            <BoardItem title="Leder" who="Andreas Klavenes Berg" email="symforch-leder@samfundet.no"/>
-            <BoardItem title="Nestleder" who="Sheikha Al-Nasser" email="symforch-nestleder@samfundet.no"/>
-            <BoardItem title="Kasserer" who="Ingrid Sofie Lindberg" email="symforch-kasserer@samfundet.no"/>
-            <BoardItem title="Materialforvalter" who="Ragnhild Fluge" email="symforch-material@samfundet.no"/>
-            <BoardItem title="Styremedlem" who="Signe Wikeland" email="symforch-styremedlem@samfundet.no"/>
-            <BoardItem title="Styremedlem" who="Christine Thoresen" email="symforch-styremedlem@samfundet.no"/>
+          {boardItems}
         </List>
     );
 }

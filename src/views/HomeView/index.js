@@ -73,6 +73,23 @@ const HomeView = () => {
                 <div>
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
+                    {/* <Grid item lg={12} md={12} xs={12}>
+                            <Paper className={classes.paper}>
+                                <Typography component="p" variant="h4">
+                                    Åpen øvelse og opptak!
+                                </Typography>
+                                <Typography component="p" variant="body1">
+                                    Den [DATO] har Studentersamfundets Symfoniorkester åpen øvelse! Her kan alle
+                                    som er interessert i å spille med orkestere møte. Vi kan by på en smakebit av 
+                                    høstens repertoar, hvordan øvelser foregår og litt av det sosiale miljøet. <br /><br />
+
+                                    Det vil bli mulighet til å melde seg på opptak til orkesteret etter øvelsen. <br /><br />
+
+                                    Vel møtt!
+
+                                </Typography>               
+                            </Paper>
+                        </Grid> */}
                         <Grid item xs={12} md={12} lg={4}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">

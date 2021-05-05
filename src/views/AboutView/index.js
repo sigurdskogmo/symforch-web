@@ -12,6 +12,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 //import Copyright from '../../components/Copyright';
 import Sponsors from '../../components/Sponsors';
 import Board from '../../components/Board';
+import BOARD from '../../BOARD';
 
 // Assets
 import Logo from '../../assets/Logo';
@@ -52,38 +53,7 @@ const AboutView = () => {
     document.title = "Om";
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 700px');
-    const boardMembers = [
-        {
-            title: 'Styreleder',
-            who: 'Andreas Klavenes Berg',
-            email: 'symforch-leder@samfundet.no'
-        },
-        {
-            title: 'Nestleder',
-            who: 'Sunniva Bauck Dahl',
-            email: 'symforch-nestleder@samfundet.no'
-        },
-        {
-            title: 'Kasserer',
-            who: 'Ingrid Sofie Lindberg',
-            email: 'symforch-kasserer@samfundet.no'
-        },
-        {
-            title: 'Materialforvalter',
-            who: 'Jakob Mæhle Skjøtskift',
-            email: 'symforch-material@samfundet.no'
-        },
-        {
-            title: 'Styremedlem',
-            who: 'Signe Wikeland',
-            email: 'symforch-styremedlem@samfundet.no'
-        },
-        {
-            title: 'Styremedlem',
-            who: 'Ida Fjellvær',
-            email: 'symforch-styremedlem@samfundet.no'
-        }
-    ];
+    const boardMembers = BOARD;
 
     return (
         <div className={classes.root}>
@@ -130,7 +100,7 @@ const AboutView = () => {
                                 <Typography component="p" variant="body1">
                                     For hendvendelser om oppdrag, forespørsler eller lignende, kontakt oss gjerne på mail eller telefon.<br /><br />
                                     <b>E-post:</b> <a href='mailto:symforch@samfundet.no'>symforch@samfundet.no</a><br />
-                                    <b>Telefon:</b> 941 95 440 (Andreas Klavenes Berg)<br />
+                                    <b>Telefon:</b> {boardMembers[0].phone} ({boardMembers[0].who})<br />
                                     <b>Facebook:</b> <a href='https://www.facebook.com/symforch'>www.facebook.com/symforch</a><br />
                                     <b>Instagram:</b> <a href='https://www.instagram.com/symforch'>www.instagram.com/symforch</a><br /><br />
                                     <b>Adresse:</b><br />

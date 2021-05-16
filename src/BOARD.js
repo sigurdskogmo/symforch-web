@@ -1,9 +1,9 @@
 const BOARD = [
     {
         title: 'Styreleder',
-        who: 'Andreas Klavenes Berg',
+        who: 'Sigurd Almåsbakk Skogmo',
         email: 'symforch-leder@samfundet.no',
-        phone: '941 95 440'
+        phone: '910 00 842'
     },
     {
         title: 'Nestleder',
@@ -12,7 +12,7 @@ const BOARD = [
     },
     {
         title: 'Kasserer',
-        who: 'Ingrid Sofie Lindberg',
+        who: 'Njål Berg Knudsen',
         email: 'symforch-kasserer@samfundet.no'
     },
     {
@@ -22,7 +22,7 @@ const BOARD = [
     },
     {
         title: 'Styremedlem',
-        who: 'Signe Wikeland',
+        who: 'Julie Singsaas',
         email: 'symforch-styremedlem@samfundet.no'
     },
     {

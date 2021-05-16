@@ -13,7 +13,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo_original.svg"
+   inkscape:export-filename="C:\Users\sigurd\Pictures\Symforch_white_bg.png"
+   inkscape:export-xdpi="92.998512"
+   inkscape:export-ydpi="92.998512">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -23,20 +26,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="250.59736"
-     inkscape:cy="195.19739"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="482.40195"
+     inkscape:cy="186.88916"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="2400"
-     inkscape:window-height="1271"
-     inkscape:window-x="2391"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1" />
   <metadata
@@ -47,10 +50,22 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bg">
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0"
+       id="rect834"
+       width="273.12299"
+       height="103.38"
+       x="5e-07"
+       y="5e-07" />
+  </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"

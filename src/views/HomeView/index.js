@@ -73,23 +73,25 @@ const HomeView = () => {
                 <div>
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
-                    {/* <Grid item lg={12} md={12} xs={12}>
+                    <Grid item lg={12} md={12} xs={12}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
-                                    Åpen øvelse og opptak!
+                                    Informasjonsmøte for nye søkere
                                 </Typography>
                                 <Typography component="p" variant="body1">
-                                    Den [DATO] har Studentersamfundets Symfoniorkester åpen øvelse! Her kan alle
-                                    som er interessert i å spille med orkestere møte. Vi kan by på en smakebit av 
-                                    høstens repertoar, hvordan øvelser foregår og litt av det sosiale miljøet. <br /><br />
+                                    Den 23. august 2021 har Studentersamfundets Symfoniorkester et informasjonsmøte for nye! Her kan alle
+                                    som er interessert i å spille med orkesteret eller lurer på hva orkesteret driver med møte.  <br /><br />
 
-                                    Det vil bli mulighet til å melde seg på opptak til orkesteret etter øvelsen. <br /><br />
+                                    Under møtet vil vi snakke litt om hvordan det er å spille i orkesteret og hva det innebærer å være medlem. 
+                                    Det vil også bli informert om hvordan opptak til orkesteret foregår og du kan melde deg på opptak. <br /><br />
+
+                                    Mer informasjon og påmelding til informasjonsmøtet finner du på <a href="https://www.facebook.com/events/3081046768791620">Facebook</a>-arrangementet. <br /><br />
 
                                     Vel møtt!
 
                                 </Typography>               
                             </Paper>
-                        </Grid> */}
+                        </Grid>
                         <Grid item xs={12} md={12} lg={4}>
                             <Paper className={classes.paper}>
                                 <Typography component="p" variant="h4">
